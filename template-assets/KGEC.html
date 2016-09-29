@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<!-- saved from url=(0057)file:///F:/college_website/template-assets/website_1.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    
+
+    <title>KGEC</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+
+    <!-- Bootstrap Css -->
+    <link href="./KGEC_files/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Style -->
+    <link href="./KGEC_files/owl.carousel.css" rel="stylesheet">
+    <link href="./KGEC_files/owl.theme.css" rel="stylesheet">
+    <link href="./KGEC_files/owl.transitions.css" rel="stylesheet">
+    <link href="./KGEC_files/lightbox.css" rel="stylesheet">
+    <link href="./KGEC_files/style.css" rel="stylesheet">
+    <link href="./KGEC_files/animate.css" rel="stylesheet">
+    <link href="./KGEC_files/main.css" rel="stylesheet">
+    <!-- Icons Font -->
+    <link rel="stylesheet" href="./KGEC_files/font-awesome.min.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="./KGEC_files/jquery.min.js.download"></script>
+
+<script>
+    $(document).ready(function(){
+    $(".dropdown").hover(            
+        function() {
+            $('.dropdown-menu', this).not('.in .dropdown-menu').stop( true, true ).slideDown("fast");
+            $(this).toggleClass('open');        
+        },
+        function() {
+            $('.dropdown-menu', this).not('.in .dropdown-menu').stop( true, true ).slideUp("fast");
+            $(this).toggleClass('open');       
+        }
+    );
+});
+
+</script>
+
+<style>
+
+
+.row-no-gutter {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.row-no-gutter [class*="col-"] {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+
+#card {
+    background: #fff;
+    position: relative;
+
+    -webkit-box-shadow: 0px 1px 10px 0px rgba(207,207,207,1);
+    -moz-box-shadow: 0px 1px 10px 0px rgba(207,207,207,1);
+    box-shadow: 0px 1px 10px 0px rgba(207,207,207,1);
+
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;  
+}
+
+.city-selected {
+    position: relative;
+    overflow: hidden;
+    min-height: 200px;
+    background: #3D6AA2;
+}
+
+article {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    padding: 20px;
+
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-align-content: flex-start;
+    -ms-flex-line-pack: start;
+    align-content: flex-start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+
+.info .city,
+.night {
+    font-size: 24px;
+    font-weight: 200;
+    position: relative;
+
+
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+}
+
+.info .city:after {
+    content: '';
+    width: 15px;
+    height: 2px;
+    background: #fff;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+.city span {
+    color: #fff;
+    font-size: 13px;
+    font-weight: bold;
+
+    text-transform: lowercase;
+    text-align: left;
+}
+
+.night {
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+
+
+
+.temp {
+    font-size: 73px;
+    display: block;
+    position: relative;
+    font-weight: bold;
+}
+
+
+.city-selected:hover figure {
+    opacity: 0.4;
+}
+
+
+figure {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.1;
+    z-index: 1;
+
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.days  [class*="col-"]:nth-child(2) .day  {
+    border-width: 0 1px 0 1px;
+    border-style: solid;
+    border-color: #eaeaea;
+}
+
+.days  [class*="col-"] {
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;  
+}
+
+.days  [class*="col-"]:hover{
+    background: #eaeaea;
+}
+
+.day {
+    padding: 10px 0px;
+    text-align: center;
+
+}
+
+.day h1 {
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+
+</style>
+
+<script type="text/javascript" charset="UTF-8" src="./KGEC_files/common.js.download"></script><script type="text/javascript" charset="UTF-8" src="./KGEC_files/util.js.download"></script><script type="text/javascript" charset="UTF-8" src="./KGEC_files/stats.js.download"></script><script type="text/javascript" charset="UTF-8" src="./KGEC_files/AuthenticationService.Authenticate"></script></head>
+
+
+<body>
+
+<!--<div class="preloader"><i class="fa fa-circle-o-notch fa-spin fa-2x"></i></div>-->
+<!--navbar starts-->
+
+<section class="main-header">
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+                        <!--<span class="sr-only">Toggle navigation</span>-->
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    
+                    <a class="navbar-brand" href="file:///F:/college_website/template-assets/website_1.html#"><img src="./KGEC_files/logo.png" width="100px" height="100px" class="img-responsive" alt="logo"></a>
+
+                </div>
+                <div class="collapse navbar-collapse text-center" id="navbar-collapse-1">
+                    <div class="col-md-8 col-xs-12 nav-wrap">
+                        <ul class="nav navbar-nav">
+     
+                            <li class="dropdown">
+              				<a href="file:///F:/college_website/template-assets/website_1.html#" class="dropdown-toggle" data-toggle="dropdown" style="font-size:10px;">About</a>             
+              				<ul class="dropdown-menu" role="menu" style="z-index:100">
+                				<li><a href="https://www.kgec.edu.in/page/inst_info/">Institute Information</a></li>
+                				<li class="divider"></li>
+                				<li><a href="https://www.kgec.edu.in/page/campus/">Campus</a></li>
+                				<li class="divider"></li>
+                				<li><a href="https://www.google.co.in/maps/place/Kalyani+Government+Engineering+College/@22.9917637,88.4466087,17z/data=!4m5!1m2!2m1!1skalyani+government+engineering+collegekalyani+west+bengal!3m1!1s0x0000000000000000:0x8f1c6d3ff467d96b?hl=en">Reach Us</a></li>
+                				<li class="divider"></li>
+                				<li><a href="http://alumnikgec.org/www">Alumini</a></li>
+                				<li class="divider"></li>
+                				<li><a href="https://www.kgec.edu.in/administration/principal">Principal's Office</a></li>
+              				</ul>                
+            				</li>
+
+                            <li class="dropdown">
+              				<a href="file:///F:/college_website/template-assets/website_1.html#" class="dropdown-toggle" data-toggle="dropdown" style="font-size:10px;">Academic</a>             
+              				<ul class="dropdown-menu" role="menu" style="z-index:100;min-width:100%">
+                				<li><a href="https://www.kgec.edu.in/department/cse/">Computer Science &amp; Engineering</a></li>
+                				<li class="divider"></li>
+                				<li><a href="https://www.kgec.edu.in/department/ee/">Electrical Engineering</a></li>
+                				<li class="divider"></li>
+                				<li><a href="https://www.kgec.edu.in/department/ece/">Electronics &amp; Communication Engineering</a></li>
+                				<li class="divider"></li>
+                				<li><a href="https://www.kgec.edu.in/department/it/">Information Technology</a></li>
+                				<li class="divider"></li>
+                				<li><a href="https://www.kgec.edu.in/department/me/">Mechanical Engineering</a></li>
+                				<li class="divider"></li>
+                				<li><a href="https://www.kgec.edu.in/department/mca/">Computer Application</a></li>
+                				<li class="divider"></li>
+                				<li><a href="https://www.kgec.edu.in/department/phys/">Department of Physics</a></li>
+                				<li class="divider"></li>
+                				<li><a href="https://www.kgec.edu.in/department/chm/">Department of Chemistry</a></li>
+                				<li class="divider"></li>
+                				<li><a href="https://www.kgec.edu.in/department/math/">Department of Mathematics</a></li>
+                				<li class="divider"></li>
+                				<li><a href="https://www.kgec.edu.in/department/hu/">Department of Humanities</a></li>
+              				</ul>                
+            				</li>
+
+                            <li class="dropdown">
+              				<a href="file:///F:/college_website/template-assets/website_1.html#" class="dropdown-toggle" data-toggle="dropdown" style="font-size:10px;">Administration</a>             
+              				<ul class="dropdown-menu" role="menu" style="z-index:100">
+                				<li><a href="https://www.kgec.edu.in/administration/principal">Principal's Office</a></li>
+                				<li class="divider"></li>
+                				<li><a href="https://www.kgec.edu.in/administration/registrar">Registrar's Office</a></li>
+              				</ul>                
+            				</li>
+
+                            <li class="dropdown">
+              				<a href="file:///F:/college_website/template-assets/website_1.html#" class="dropdown-toggle" data-toggle="dropdown" style="font-size:10px;">Admission</a>             
+              				<ul class="dropdown-menu" role="menu" style="z-index:100;">
+                				<li><a href="https://www.kgec.edu.in/admission/btech">Under Graduate (B.Tech)</a></li>
+                				<li class="divider"></li>
+                				<li><a href="https://www.kgec.edu.in/admission/mtech">Post Graduate (M.Tech)</a></li>
+                				<li class="divider"></li>
+                				<li><a href="https://www.kgec.edu.in/admission/mca">MCA</a></li>
+              				</ul>                
+            				</li>
+
+                             <li class="dropdown">
+              				<a href="file:///F:/college_website/template-assets/website_1.html#" class="dropdown-toggle" data-toggle="dropdown" style="font-size:10px;">Training &amp; Placement</a>             
+              				<ul class="dropdown-menu" role="menu" style="z-index:100;min-width:100%">
+                				<li><a href="https://www.kgec.edu.in/trgplc">TPO's Desk</a></li>
+                				<li class="divider"></li>
+                				<li><a href="https://www.kgec.edu.in/trgplc/record">Placement Statistics</a></li>
+                				<li class="divider"></li>
+                				<li><a href="https://www.kgec.edu.in/notice/PLACEMENT">Placement Notice</a></li>
+                				<li class="divider"></li>
+                				<li><a href="https://www.kgec.edu.in/page/plc_reg">Registration</a></li>
+              				</ul>                
+            				</li>
+
+
+                            <li class="dropdown">
+              				<a href="file:///F:/college_website/template-assets/website_1.html#" class="dropdown-toggle" data-toggle="dropdown" style="font-size:10px;">Contact</a>             
+              				<ul class="dropdown-menu" role="menu" style="z-index:100">
+                				<li><a href="https://www.kgec.edu.in/contact">Contact Us</a></li>
+                				<li class="divider"></li>
+                				<li><a href="http://goo.gl/forms/1jmC4f8HSF">Website Feedback</a></li>
+              				</ul>                
+            				</li>
+
+
+                        </ul>
+
+                    </div>
+                    <div class="social-media hidden-sm hidden-xs">
+                        <ul class="nav navbar-nav">
+                            <li><a href="file:///F:/college_website/template-assets/website_1.html#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="file:///F:/college_website/template-assets/website_1.html#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="file:///F:/college_website/template-assets/website_1.html#"><i class="fa fa-dribbble"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+       <div id="owl-hero" class="owl-carousel owl-theme" style="opacity: 1; display: block;">
+<!--            <div class="item" style="background-image: url(img/sliders/Slide.jpg)">
+                <div class="caption">
+                    <h1><span>Kalyani Government Engineering College</span></h1>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(img/sliders/Slide2.jpg)">
+                <div class="caption">
+                    <h1><span>Kalyani Government Engineering College</span></h1>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(img/sliders/Slide3.jpg)">
+                <div class="caption">
+                    
+                    <h1><span>Kalyani Government Engineering College</span></h1>
+                    
+                </div>
+            </div>
+-->
+            <div class="owl-wrapper-outer"><div class="owl-wrapper owl-origin" style="width: 18886px; left: 0px; display: block; transition: all 0ms ease; transform: translate3d(-6745px, 0px, 0px); transform-origin: 7419.5px center 0px; perspective-origin: 7419.5px center;"><div class="owl-item" style="width: 1349px;"><div class="item" style="background-image: url(&quot;https://www.kgec.edu.in/media/Institute/ScrollImage/DSC_5606_Vk164m4.jpg&quot;); height: 662px;">
+                <div class="caption">
+                    <h1 style="max-width:90%;color: white; text-shadow: 2px 2px 4px #000000;"><span>Kalyani Government Engineering College</span></h1>
+                    
+                </div>
+            </div></div><div class="owl-item" style="width: 1349px;"><div class="item" style="background-image: url(&quot;https://www.kgec.edu.in/media/Institute/ScrollImage/DSC_5616_rPr7hGm.jpg&quot;); height: 662px;">
+                <div class="caption">
+                    
+                    <h1 style="max-width:90%;color: white; text-shadow: 2px 2px 4px #000000;"><span>Kalyani Government Engineering College</span></h1>
+                    
+                </div>
+            </div></div><div class="owl-item" style="width: 1349px;"><div class="item" style="background-image: url(&quot;https://www.kgec.edu.in/media/Institute/ScrollImage/DSC_5622_mOf6JO2.jpg&quot;); height: 662px;">
+                <div class="caption">
+                    
+                    <h1 style="max-width:90%;color: white; text-shadow: 2px 2px 4px #000000;"><span>Kalyani Government Engineering College</span></h1>
+                    
+                </div>
+            </div></div><div class="owl-item" style="width: 1349px;"><div class="item" style="background-image: url(&quot;https://www.kgec.edu.in/media/Institute/ScrollImage/DSC_5640_osnGznd.jpg&quot;); height: 662px;">
+                <div class="caption">
+                    
+                    <h1 style="max-width:90%;color: white; text-shadow: 2px 2px 4px #000000;"><span>Kalyani Government Engineering College</span></h1>
+                    
+                </div>
+            </div></div><div class="owl-item owl-fadeUp-out" style="width: 1349px; position: relative; left: 1349px;"><div class="item" style="background-image: url(&quot;https://www.kgec.edu.in/media/Institute/ScrollImage/IMG_9959_7wFy9BX.JPG&quot;); height: 662px;">
+                <div class="caption">
+                    
+                    <h1 style="max-width:90%;color: white; text-shadow: 2px 2px 4px #000000;"><span>Kalyani Government Engineering College</span></h1>
+                    
+                </div>
+            </div></div><div class="owl-item owl-fadeUp-in" style="width: 1349px;"><div class="item" style="background-image: url(&quot;https://www.kgec.edu.in/media/Institute/ScrollImage/DSC_5580.jpg&quot;); height: 662px;">
+                <div class="caption">
+                    
+                    <h1 style="max-width:90%;color: white; text-shadow: 2px 2px 4px #000000;"><span>Kalyani Government Engineering College</span></h1>
+                    
+                </div>
+            </div></div><div class="owl-item" style="width: 1349px;"><div class="item" style="background-image: url(&quot;https://www.kgec.edu.in/media/Institute/ScrollImage/DSC_5598.jpg&quot;); height: 662px;">
+                <div class="caption">
+                    
+                    <h1 style="max-width:90%;color: white; text-shadow: 2px 2px 4px #000000;"><span>Kalyani Government Engineering College</span></h1>
+                    
+                </div>
+            </div></div></div></div>
+
+            
+
+
+            
+
+
+            
+
+
+            
+
+
+            
+
+
+            
+
+
+        <div class="owl-controls clickable"><div class="owl-pagination"><div class="owl-page"><span class=""></span></div><div class="owl-page"><span class=""></span></div><div class="owl-page"><span class=""></span></div><div class="owl-page"><span class=""></span></div><div class="owl-page"><span class=""></span></div><div class="owl-page active"><span class=""></span></div><div class="owl-page"><span class=""></span></div></div><div class="owl-buttons"><div class="owl-prev"><i class="fa fa-angle-left"></i></div><div class="owl-next"><i class="fa fa-angle-right"></i></div></div></div></div>
+    </section>
+
+
+<!--navbar ends-->
+
+<!--notice events begins-->
+
+<!--previous events cards-->
+
+<section id="events">
+    <div class="container">
+        <!--<h2>Welcome to Kalyani Government Engineering College</h2>
+        <hr class="sep">
+        <p style="text-align:center">"a deeper insight....explore yourself"</p>-->
+        <div class="row">
+
+          <div class="col-md-6">
+          <h4>About US</h4>
+          <p>Tell me something about us</p>
+          </div>
+        <!--<div class="wow fadeInUp" data-wow-delay=".3s">
+
+
+            <div class="col-md-4">
+                <div class="team weter" id="card">
+                    <div class="city-selected">
+                        <article>
+                            <div class="info">
+                                <div class="city"><span></span><b>About Us</b></div>
+                                <div class="night">"something about our college"</div>
+                            </div>
+                        </article>
+                        <figure style="background-image: url(img/team/MariaDoe.jpg)"></figure>
+                    </div>
+                    <div class="days">
+                        <div class="row row-no-gutter">
+                            <div class="col-md-4">
+                                <div class="day">
+                                    <h1 style="color:black">Read More</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>-->
+
+
+        <div class="wow fadeInUp" data-wow-delay=".3s" style="visibility: hidden; animation-delay: 0.3s; animation-name: none;">
+
+
+            <div class="col-md-3">
+                <div class="team weter" id="card">
+                    <div class="city-selected">
+                        <article>
+                            <div class="info">
+                                <div class="city"><span></span><b>Notice</b></div>
+                                <div class="night">
+                                    <ul>
+                                        <li><a href="https://www.kgec.edu.in/notice/72" style="color:white;font-size:12px">CORRIGENDUM Notice_B.Tech.Admin, <i>Sept 26, 2016</i></a></li>
+                                        <li><a href="https://www.kgec.edu.in/notice/73" style="color:white;font-size:12px">M.Tech Merit List for Counse, <i>Sept 26, 2016</i></a></li>
+                                        <li><a href="https://www.kgec.edu.in/notice/66" style="color:white;font-size:12px">KGEC/B.Tech._Adm./2016-17/208, <i>Sept 23, 2016</i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </article>
+                        <figure style="background-image: url(img/team/MariaDoe.jpg)"></figure>
+                    </div>
+                    <div class="days">
+                        <div class="row row-no-gutter">
+                            <div class="col-md-4">
+                                <div class="day">
+                                    <a href="https://www.kgec.edu.in/notice/"><h1 style="color:black">Read More</h1></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="wow fadeInUp" data-wow-delay=".3s" style="visibility: hidden; animation-delay: 0.3s; animation-name: none;">
+
+
+            <div class="col-md-3">
+                <div class="team weter" id="card">
+                    <div class="city-selected">
+                        <article>
+                            <div class="info">
+                                <div class="city"><span></span><b>Tenders</b></div>
+                            </div>
+                        </article>
+                        <figure style="background-image: url(img/team/MariaDoe.jpg)"></figure>
+                    </div>
+                    <div class="days">
+                        <div class="row row-no-gutter">
+                            <div class="col-md-4">
+                                <div class="day">
+                                    <h1 style="color:black">Read More</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="wow fadeInUp" data-wow-delay=".3s" style="visibility: hidden; animation-delay: 0.3s; animation-name: none;">
+
+
+            <div class="col-md-4">
+                <div class="team weter" id="card">
+                    <div class="city-selected">
+                        <article>
+                            <div class="info">
+                                <div class="city"><span></span><b>DL Talk by IEEE EDS KGEC SBC</b></div>
+                                <div class="night"><p style="font-size:12px;color:white">IEEE EDS KGEC Student Branch Chapter in association with ECE Dept. Organizing a Distinguished Lecture(DL). Talk On Engineering evolution in Electronics and 50 Years of Moore' Date:22nd September, 2016 Time: 11:30pm Venue: LAnguage Laboratory, KGEC</p></div>
+                            </div>
+                        </article>
+                        <figure style="background-image: url(https://www.kgec.edu.in/media/notice/special_events/ieee123.thumbnail.jpg)"></figure>
+                    </div>
+                    <div class="days">
+                        <div class="row row-no-gutter">
+                            <div class="col-md-4">
+                                <div class="day">
+                                    <a href="http://sites.ieee.org/sb-kgec/future-events/dl-talk-on-22nd-september/"><h1 style="color:black">Read More</h1></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="wow fadeInUp" data-wow-delay=".3s" style="visibility: hidden; animation-delay: 0.3s; animation-name: none;">
+
+
+            <div class="col-md-4">
+                <div class="team weter" id="card">
+                    <div class="city-selected">
+                        <article>
+                            <div class="info">
+                                <div class="temp"><span></span><b>Espectro</b></div>
+                            </div>
+                        </article>
+                        <figure style="background-image: url(https://www.kgec.edu.in/media/notice/special_events/espectro.thumbnail.png)"></figure>
+                    </div>
+                    <div class="days">
+                        <div class="row row-no-gutter">
+                            <div class="col-md-4">
+                                <div class="day">
+                                    <h1 style="color:black">Read More</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+    </div>
+</section>
+
+<!--end of previous cards-->
+
+<!--new events cards-->
+<section id="events">
+<div class="container">
+<div class="row">
+<div class="wow fadeInUp" data-wow-delay=".3s" style="visibility: hidden; animation-delay: 0.3s; animation-name: none;">
+
+<div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img src="./KGEC_files/JasonDoe.jpg" alt="events">
+      <div class="caption">
+        <h3>Espectro</h3>
+        <p>Annual College Fest</p>
+        <p><a href="file:///F:/college_website/template-assets/website_1.html#" class="btn btn-primary" role="button">Button</a> <!--<a href="#" class="btn btn-default" role="button">Button</a>--></p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</section>
+<!--new events cards-->
+
+<!-- end of Notice and events-->
+
+<!--clubs section begins-->
+
+
+    <section id="portfolio">
+        <div class="container-fluid">
+            <h2>Our Clubs</h2>
+            <hr class="sep">
+            <p><i>creating wonders</i></p>
+            <div class="row">
+                <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay=".3s" style="visibility: hidden; animation-delay: 0.3s; animation-name: none;">
+                    <a class="portfolio-box" href="./KGEC_files/1.jpg" data-lightbox="image-1" data-title="Your caption">
+                        <img src="./KGEC_files/1.jpg" class="img-responsive" alt="1">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    KeyGEnCoders
+                                </div>
+                                <div class="project-name">
+                                    Coding Club of KGEC<br><br>(click me to read more !!)
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay=".3s" style="visibility: hidden; animation-delay: 0.3s; animation-name: none;">
+                    <a href="./KGEC_files/2.jpg" class="portfolio-box" data-lightbox="image-2" data-title="Your caption">
+                        <img src="./KGEC_files/2.jpg" class="img-responsive" alt="2">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Literary Club
+                                </div>
+                                <div class="project-name">
+                                    "A pen is more powerful than an weapon"<br><br>(click me to reak more !!)
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay=".3s" style="visibility: hidden; animation-delay: 0.3s; animation-name: none;">
+                    <a href="./KGEC_files/3.jpg" class="portfolio-box" data-lightbox="image-3" data-title="Your caption">
+                        <img src="./KGEC_files/3.jpg" class="img-responsive" alt="3">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Photography Club
+                                </div>
+                                <div class="project-name">
+                                   "every moment is special, so keep clicking"<br><br>(click me to read more !!)
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay=".3s" style="visibility: hidden; animation-delay: 0.3s; animation-name: none;">
+                    <a href="./KGEC_files/4.jpg" class="portfolio-box" data-lightbox="image-4" data-title="Your caption">
+                        <img src="./KGEC_files/4.jpg" class="img-responsive" alt="4">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Club Name
+                                </div>
+                                <div class="project-name">
+                                    One line description<br><br>(click me to read more !!)
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay=".3s" style="visibility: hidden; animation-delay: 0.3s; animation-name: none;">
+                    <a href="./KGEC_files/5.jpg" class="portfolio-box" data-lightbox="image-5" data-title="Your caption">
+                        <img src="./KGEC_files/5.jpg" class="img-responsive" alt="5">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Club Name
+                                </div>
+                                <div class="project-name">
+                                    One line description<br><br>(click me to read more !!)
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay=".3s" style="visibility: hidden; animation-delay: 0.3s; animation-name: none;">
+                    <a href="./KGEC_files/6.jpg" class="portfolio-box" data-lightbox="image-6" data-title="Your caption">
+                        <img src="./KGEC_files/6.jpg" class="img-responsive" alt="6">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Club Name
+                                </div>
+                                <div class="project-name">
+                                    One line description<br><br>(click me to read more !!)
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+<!--club seciton ends-->
+
+<!--writings from Principal and other persons-->
+
+    <section id="testimonials">
+        <div class="container">
+            <h2>Testimonials</h2>
+            <hr class="light-sep">
+            <i>Words from our College Authorities</i>
+            <div id="owl-testi" class="owl-carousel owl-theme" style="opacity: 1; display: block;">
+                <div class="owl-wrapper-outer"><div class="owl-wrapper owl-origin" style="width: 6840px; left: 0px; display: block; transition: all 0ms ease; transform: translate3d(-2280px, 0px, 0px); transform-origin: 2850px center 0px; perspective-origin: 2850px center;"><div class="owl-item" style="width: 1140px;"><div class="item">
+                    <div class="quote">
+                        <h5><i class="fa fa-quote-left left fa-2x"></i>
+                        This is the quote to be said by Principal Sir.<i class="fa fa-quote-right right fa-2x"></i></h5><br><b>Principal</b>
+
+                    </div>
+                </div></div><div class="owl-item owl-backSlide-out" style="width: 1140px; position: relative; left: 1140px;"><div class="item">
+                    <div class="quote">
+                        <h5><i class="fa fa-quote-left left fa-2x"></i>
+                        Quote to be said by Registrar Sir<i class="fa fa-quote-right right fa-2x"></i></h5><br><b>Registrar</b>
+
+                    </div>
+                </div></div><div class="owl-item owl-backSlide-in" style="width: 1140px;"><div class="item">
+                    <div class="quote">
+                        <h5><i class="fa fa-quote-left left fa-2x"></i>
+                        Quote to be said by K.D. Sir<i class="fa fa-quote-right right fa-2x"></i></h5><br><b>K.D.Sir</b>
+
+                    </div>
+                </div></div></div></div>
+                
+                
+            <div class="owl-controls clickable"><div class="owl-pagination"><div class="owl-page"><span class=""></span></div><div class="owl-page"><span class=""></span></div><div class="owl-page active"><span class=""></span></div></div></div></div>
+        </div>
+    </section>
+
+
+
+<!--writings from Principal sir ends-->
+
+
+
+
+
+<footer>
+    <div class="container">
+        <h2>Kalyani Government Engineering College</h2><br><br>
+        <div class="row wow fadeInUp" data-wow-delay=".3s" style="visibility: hidden; animation-delay: 0.3s; animation-name: none;">
+            <div class="col-lg-3">
+                <h4>Kalyani, Nadia<br>West Bengal, India 741235<br>Phone: +91 3325821309<br>Email: contact@kgec.edu.in</h4>
+            </div>
+            <div class="col-lg-3">
+                <h4>Explore KGEC</h4><hr style="max-width:40%">
+                <a href="https://www.kgec.edu.in/page/inst_info/"><h4>Institute Information</h4></a>
+                <a href="https://www.kgec.edu.in/page/campus/"><h4>Campus Facilities</h4></a>
+                <a href="https://www.kgec.edu.in/hostels/"><h4>Hostels</h4></a>
+                <a href="http://su.kgec.ac.in/"><h4>Student's Union</h4></a>
+                <a href="http://espektro.in/"><h4>Espectro</h4></a>
+            </div>
+            <div class="col-lg-3">
+                <h4>Clubs</h4><hr style="max-width:40%">
+                <h4>Music Club</h4>
+                <h4>Dance club-Elysium</h4>
+                <h4>KeyGEnCoders</h4>
+                <h4>Literary Society-Litmus</h4>
+                <h4 style="font-size:21px">Quiz Club-Les Quizerables</h4>
+                <h4>Photography Club</h4>
+                <h4>E-Cell</h4>
+            </div>
+            <div class="col-lg-3">
+                <h4>Important Links</h4><hr style="max-width:40%">
+                <h4>KGEC ITRA R&amp;D</h4>
+                <h4>KGEC IEEE Chapter</h4>
+                <h4>KGEC IBRA Chapter</h4>
+            </div>
+        </div>
+        <h6>© 2016 Kalyani Government Engineering College</h6>
+    </div>
+</footer>
+
+
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="./KGEC_files/jquery.min.js(1).download"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="./KGEC_files/bootstrap.min.js.download"></script>
+    <script src="./KGEC_files/custom.js.download"></script>
+    <!-- JS PLUGINS -->
+    <script src="./KGEC_files/owl.carousel.min.js.download"></script>
+    <script src="./KGEC_files/jquery.easing.min.js.download"></script>
+    <script src="file:///F:/college_website/template-assets/plugins/waypoints/jquery.waypoints.min.js"></script>
+    <script src="./KGEC_files/jquery.countTo.js.download"></script>
+    <script src="./KGEC_files/jquery.inview.min.js.download"></script>
+    <script src="./KGEC_files/lightbox.min.js.download"></script><div id="lightboxOverlay" class="lightboxOverlay" style="display: none;"></div><div id="lightbox" class="lightbox" style="display: none;"><div class="lb-outerContainer"><div class="lb-container"><img class="lb-image" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="><div class="lb-nav"><a class="lb-prev" href="file:///F:/college_website/template-assets/website_1.html"></a><a class="lb-next" href="file:///F:/college_website/template-assets/website_1.html"></a></div><div class="lb-loader"><a class="lb-cancel"></a></div></div></div><div class="lb-dataContainer"><div class="lb-data"><div class="lb-details"><span class="lb-caption"></span><span class="lb-number"></span></div><div class="lb-closeContainer"><a class="lb-close"></a></div></div></div></div>
+    <script src="./KGEC_files/wow.min.js.download"></script>
+    <!-- GOOGLE MAP -->
+    <script src="./KGEC_files/js"></script>
+
+
+
+</body></html>
