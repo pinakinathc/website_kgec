@@ -1,0 +1,364 @@
+{% extends "nav.html" %}
+{% load staticfiles %}
+
+{% block body %}
+
+<section class="main-header">
+           <div id="owl-hero" class="owl-carousel owl-theme">
+
+
+            {% for scrolling in inst_sc_img %}
+            <div class="item" style="background-image: url({{scrolling.ImageScroll.url }}">
+                <div class="caption">
+                    <h1 style="max0width:90%;color: white; text-shadow: 2px 2px 4px #000000;"><span>{{scrolling.ImageDes}}</span></h1>
+                    <p style="max-width:90%;color: white;text-shadow:2px 2px 4px #000000;"><span>{{scrolling.ImageComment}}</span></p>
+                </div>
+            </div>
+            {% endfor %}
+
+
+        </div>
+    </section>
+
+
+<!--navbar ends-->
+
+<!--notice events begins-->
+
+<!--previous events cards-->
+
+<section id="events">
+    <div class="container">
+        <!--<h2>Welcome to Kalyani Government Engineering College</h2>
+        <hr class="sep">
+        <p style="text-align:center">"a deeper insight....explore yourself"</p>-->
+        <div class="row">
+
+          <div class="col-md-6">
+          <div class="quote"><h4>About US</h4>
+          <p><i class="fa fa-quote-left left fa-2x"></i>This section contains information of our college<i class="fa fa-quote-right right fa-2x"></i></p></div>
+          </div>
+        <!--<div class="wow fadeInUp" data-wow-delay=".3s">
+
+
+            <div class="col-md-4">
+                <div class="team weter" id="card">
+                    <div class="city-selected">
+                        <article>
+                            <div class="info">
+                                <div class="city"><span></span><b>About Us</b></div>
+                                <div class="night">"something about our college"</div>
+                            </div>
+                        </article>
+                        <figure style="background-image: url(img/team/MariaDoe.jpg)"></figure>
+                    </div>
+                    <div class="days">
+                        <div class="row row-no-gutter">
+                            <div class="col-md-4">
+                                <div class="day">
+                                    <h1 style="color:black">Read More</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>-->
+        
+
+        <div class="wow fadeInUp" data-wow-delay=".3s">
+
+
+            <div class="col-md-3">
+                <div class="team weter" id="card">
+                    <div class="city-selected">
+                        <article>
+                            <div class="info">
+                                <div class="city"><span></span><b>Notice</b></div>
+                                <div class="night">
+                                    <ul>
+                                        <li><a href="https://www.kgec.edu.in/notice/72" style="color:white;font-size:12px">CORRIGENDUM Notice_B.Tech.Admin, <i>Sept 26, 2016</i></a></li>
+                                        <li><a href="https://www.kgec.edu.in/notice/73" style="color:white;font-size:12px">M.Tech Merit List for Counse, <i>Sept 26, 2016</i></a></li>
+                                        <li><a href="https://www.kgec.edu.in/notice/66" style="color:white;font-size:12px">KGEC/B.Tech._Adm./2016-17/208, <i>Sept 23, 2016</i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </article>
+                        <figure style="background-image: url(img/team/MariaDoe.jpg)"></figure>
+                    </div>
+                    <div class="days">
+                        <div class="row row-no-gutter">
+                            <div class="col-md-4">
+                                <div class="day">
+                                    <a href="https://www.kgec.edu.in/notice/"><h1 style="color:black">Read More</h1></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="wow fadeInUp" data-wow-delay=".3s">
+
+
+            <div class="col-md-3">
+                <div class="team weter" id="card">
+                    <div class="city-selected">
+                        <article>
+                            <div class="info">
+                                <div class="city"><span></span><b>Tenders</b></div>
+                            </div>
+                        </article>
+                        <figure style="background-image: url(img/team/MariaDoe.jpg)"></figure>
+                    </div>
+                    <div class="days">
+                        <div class="row row-no-gutter">
+                            <div class="col-md-4">
+                                <div class="day">
+                                    <h1 style="color:black">Read More</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="wow fadeInUp" data-wow-delay=".3s">
+
+
+            <div class="col-md-4">
+                <div class="team weter" id="card">
+                    <div class="city-selected">
+                        <article>
+                            <div class="info">
+                                <div class="city"><span></span><b>DL Talk by IEEE EDS KGEC SBC</b></div>
+                                <div class="night"><p style="font-size:12px;color:white">IEEE EDS KGEC Student Branch Chapter in association with ECE Dept. Organizing a Distinguished Lecture(DL). Talk On Engineering evolution in Electronics and 50 Years of Moore' Date:22nd September, 2016 Time: 11:30pm Venue: LAnguage Laboratory, KGEC</p></div>
+                            </div>
+                        </article>
+                        <figure style="background-image: url(https://www.kgec.edu.in/media/notice/special_events/ieee123.thumbnail.jpg)"></figure>
+                    </div>
+                    <div class="days">
+                        <div class="row row-no-gutter">
+                            <div class="col-md-4">
+                                <div class="day">
+                                    <a href="http://sites.ieee.org/sb-kgec/future-events/dl-talk-on-22nd-september/"><h1 style="color:black">Read More</h1></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="wow fadeInUp" data-wow-delay=".3s">
+
+
+            <div class="col-md-4">
+                <div class="team weter" id="card">
+                    <div class="city-selected">
+                        <article>
+                            <div class="info">
+                                <div class="temp"><span></span><b>Espectro</b></div>
+                            </div>
+                        </article>
+                        <figure style="background-image: url(https://www.kgec.edu.in/media/notice/special_events/espectro.thumbnail.png)"></figure>
+                    </div>
+                    <div class="days">
+                        <div class="row row-no-gutter">
+                            <div class="col-md-4">
+                                <div class="day">
+                                    <h1 style="color:black">Read More</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+    </div>
+</section>
+
+<!--end of previous cards-->
+
+<!--new events cards-->
+<section id="events">
+<div class="container">
+<div class="row">
+<div class="wow fadeInUp" data-wow-delay=".3s">
+
+<div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img src="img/team/JasonDoe.jpg" alt="events">
+      <div class="caption">
+        <h3>Espektro</h3>
+        <p>Annual College Fest</p>
+        <p><a href="#" class="btn btn-primary" role="button">Button</a> <!--<a href="#" class="btn btn-default" role="button">Button</a>--></p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</section>
+<!--new events cards-->
+
+<!-- end of Notice and events-->
+
+<!--clubs section begins-->
+
+
+    <section id="portfolio">
+        <div class="container-fluid">
+            <h2>Our Clubs</h2>
+            <hr class="sep">
+            <p><i>creating wonders</i></p>
+            <div class="row">
+                <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay=".3s">
+                    <a class="portfolio-box" href="img/portfolio/1.jpg" data-lightbox="image-1" data-title="Your caption">
+                        <img src="{% static 'img/portfolio/1.jpg' %}" class="img-responsive" alt="1">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    KeyGEnCoders
+                                </div>
+                                <div class="project-name">
+                                    Coding Club of KGEC<br><br>(click me to read more !!)
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay=".3s">
+                    <a href="img/portfolio/2.jpg" class="portfolio-box" data-lightbox="image-2" data-title="Your caption">
+                        <img src="{% static 'img/portfolio/2.jpg' %}" class="img-responsive" alt="2">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Literary Club
+                                </div>
+                                <div class="project-name">
+                                    "A pen is more powerful than an weapon"<br><br>(click me to reak more !!)
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay=".3s">
+                    <a href="img/portfolio/3.jpg" class="portfolio-box" data-lightbox="image-3" data-title="Your caption">
+                        <img src="{% static 'img/portfolio/3.jpg' %}" class="img-responsive" alt="3">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Photography Club
+                                </div>
+                                <div class="project-name">
+                                   "every moment is special, so keep clicking"<br><br>(click me to read more !!)
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay=".3s">
+                    <a href="img/portfolio/4.jpg" class="portfolio-box" data-lightbox="image-4" data-title="Your caption">
+                        <img src="{% static 'img/portfolio/4.jpg' %}" class="img-responsive" alt="4">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Club Name
+                                </div>
+                                <div class="project-name">
+                                    One line description<br><br>(click me to read more !!)
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay=".3s">
+                    <a href="img/portfolio/5.jpg" class="portfolio-box" data-lightbox="image-5" data-title="Your caption">
+                        <img src="{% static 'img/portfolio/5.jpg' %}" class="img-responsive" alt="5">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Club Name
+                                </div>
+                                <div class="project-name">
+                                    One line description<br><br>(click me to read more !!)
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay=".3s">
+                    <a href="img/portfolio/6.jpg" class="portfolio-box" data-lightbox="image-6" data-title="Your caption">
+                        <img src="{% static 'img/portfolio/6.jpg' %} class="img-responsive" alt="6">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Club Name
+                                </div>
+                                <div class="project-name">
+                                    One line description<br><br>(click me to read more !!)
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+<!--club seciton ends-->
+
+<!--writings from Principal and other persons-->
+
+    <section id="testimonials">
+        <div class="container">
+            <h2>Testimonials</h2>
+            <hr class="light-sep">
+            <i>Words from our College Authorities</i>
+            <div id="owl-testi" class="owl-carousel owl-theme">
+                <div class="item">
+                    <div class="quote">
+                        <h5><i class="fa fa-quote-left left fa-2x"></i>
+                        This is the quote to be said by Principal Sir.<i class="fa fa-quote-right right fa-2x"></i></h5><br><b>Principal</b>
+
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="quote">
+                        <h5><i class="fa fa-quote-left left fa-2x"></i>
+                        Quote to be said by Registrar Sir<i class="fa fa-quote-right right fa-2x"></i></h5><br><b>Registrar</b>
+
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="quote">
+                        <h5><i class="fa fa-quote-left left fa-2x"></i>
+                        Quote to be said by K.D. Sir<i class="fa fa-quote-right right fa-2x"></i></h5><br><b>K.D.Sir</b>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
+
+
+<!--writings from Principal sir ends-->

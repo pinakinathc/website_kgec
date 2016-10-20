@@ -1,0 +1,390 @@
+{% load staticfiles %}
+<!doctype html>
+
+<html>
+
+<head>
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+    <title>KGEC</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+
+    <!-- Bootstrap Css -->
+    <link href="{% static 'bootstrap-assets/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Style -->
+    <link href="{% static 'plugins/owl-carousel/owl.carousel.css' %}" rel="stylesheet">
+    <link href="{% static 'plugins/owl-carousel/owl.theme.css' %}" rel="stylesheet">
+    <link href="{% static 'plugins/owl-carousel/owl.transitions.css' %}" rel="stylesheet">
+    <link href="{% static 'plugins/Lightbox/dist/css/lightbox.css' %}" rel="stylesheet">
+    <link href="{% static 'plugins/Icons/et-line-font/style.css' %}" rel="stylesheet">
+    <link href="{% static 'plugins/animate.css/animate.css' %}" rel="stylesheet">
+    <link href="{% static 'css/main.css' %}" rel="stylesheet">
+    <!-- Icons Font -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+    $(".dropdown").hover(            
+        function() {
+            $('.dropdown-menu', this).not('.in .dropdown-menu').stop( true, true ).slideDown("fast");
+            $(this).toggleClass('open');        
+        },
+        function() {
+            $('.dropdown-menu', this).not('.in .dropdown-menu').stop( true, true ).slideUp("fast");
+            $(this).toggleClass('open');       
+        }
+    );
+});
+
+</script>
+
+<style>
+
+
+.row-no-gutter {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.row-no-gutter [class*="col-"] {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+
+#card {
+    background: #fff;
+    position: relative;
+
+    -webkit-box-shadow: 0px 1px 10px 0px rgba(207,207,207,1);
+    -moz-box-shadow: 0px 1px 10px 0px rgba(207,207,207,1);
+    box-shadow: 0px 1px 10px 0px rgba(207,207,207,1);
+
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;  
+}
+
+.city-selected {
+    position: relative;
+    overflow: hidden;
+    min-height: 200px;
+    background: #3D6AA2;
+}
+
+article {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    padding: 20px;
+
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-align-content: flex-start;
+    -ms-flex-line-pack: start;
+    align-content: flex-start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+
+.info .city,
+.night {
+    font-size: 24px;
+    font-weight: 200;
+    position: relative;
+
+
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+}
+
+.info .city:after {
+    content: '';
+    width: 15px;
+    height: 2px;
+    background: #fff;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+.city span {
+    color: #fff;
+    font-size: 13px;
+    font-weight: bold;
+
+    text-transform: lowercase;
+    text-align: left;
+}
+
+.night {
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+
+
+
+.temp {
+    font-size: 73px;
+    display: block;
+    position: relative;
+    font-weight: bold;
+}
+
+
+.city-selected:hover figure {
+    opacity: 0.4;
+}
+
+
+figure {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.1;
+    z-index: 1;
+
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.days  [class*="col-"]:nth-child(2) .day  {
+    border-width: 0 1px 0 1px;
+    border-style: solid;
+    border-color: #eaeaea;
+}
+
+.days  [class*="col-"] {
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;  
+}
+
+.days  [class*="col-"]:hover{
+    background: #eaeaea;
+}
+
+.day {
+    padding: 10px 0px;
+    text-align: center;
+
+}
+
+.day h1 {
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+
+</style>
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <!--<span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>-->
+                        <!-- <span class="glyphicon glyphicon-option-vertical" style="color:white; font-size:100px;"></span> -->
+                        <i class="fa fa-circle-o fa-xm" aria-hidden="true" style='color:white'></i></br>
+                        <i class="fa fa-circle-o fa-xs" aria-hidden="true" style='color:white'></i></br>
+                        <i class="fa fa-circle-o fa-.5x" aria-hidden="true" style='color:white'></i></br>
+                    </button>
+                    
+                    <a class="navbar-brand" href="#"><img src="{% static 'img/logo.png' %}" width="100px" height="100px" class="img-responsive" alt="logo"></a>
+
+                </div>
+                <div class="collapse navbar-collapse text-center" id="navbar-collapse-1">
+                    <div class="col-md-8 col-xs-12 nav-wrap">
+                        <ul class="nav navbar-nav">
+     
+                            <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="font-size:10px;">About</a>             
+                            <ul class="dropdown-menu" role="menu" style="z-index:100">
+                                <li><a href="https://www.kgec.edu.in/page/inst_info/">Institute Information</a></li>
+                                <li class="divider"></li>
+                                <li><a href="https://www.kgec.edu.in/page/campus/">Campus</a></li>
+                                <li class="divider"></li>
+                                <li><a href="https://www.google.co.in/maps/place/Kalyani+Government+Engineering+College/@22.9917637,88.4466087,17z/data=!4m5!1m2!2m1!1skalyani+government+engineering+collegekalyani+west+bengal!3m1!1s0x0000000000000000:0x8f1c6d3ff467d96b?hl=en">Reach Us</a></li>
+                                <li class="divider"></li>
+                                <li><a href="http://alumnikgec.org/www">Alumini</a></li>
+                                <li class="divider"></li>
+                                <li><a href="https://www.kgec.edu.in/administration/principal">Principal's Office</a></li>
+                            </ul>                
+                            </li>
+
+                            <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="font-size:10px;">Academic</a>             
+                            <ul class="dropdown-menu" role="menu" style="z-index:100;min-width:100%">
+                                <li><a href="https://www.kgec.edu.in/department/cse/">Computer Science & Engineering</a></li>
+                                <li class="divider"></li>
+                                <li><a href="https://www.kgec.edu.in/department/ee/">Electrical Engineering</a></li>
+                                <li class="divider"></li>
+                                <li><a href="https://www.kgec.edu.in/department/ece/">Electronics & Communication Engineering</a></li>
+                                <li class="divider"></li>
+                                <li><a href="https://www.kgec.edu.in/department/it/">Information Technology</a></li>
+                                <li class="divider"></li>
+                                <li><a href="https://www.kgec.edu.in/department/me/">Mechanical Engineering</a></li>
+                                <li class="divider"></li>
+                                <li><a href="https://www.kgec.edu.in/department/mca/">Computer Application</a></li>
+                                <li class="divider"></li>
+                                <li><a href="https://www.kgec.edu.in/department/phys/">Department of Physics</a></li>
+                                <li class="divider"></li>
+                                <li><a href="https://www.kgec.edu.in/department/chm/">Department of Chemistry</a></li>
+                                <li class="divider"></li>
+                                <li><a href="https://www.kgec.edu.in/department/math/">Department of Mathematics</a></li>
+                                <li class="divider"></li>
+                                <li><a href="https://www.kgec.edu.in/department/hu/">Department of Humanities</a></li>
+                            </ul>                
+                            </li>
+
+                            <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="font-size:10px;">Administration</a>             
+                            <ul class="dropdown-menu" role="menu" style="z-index:100">
+                                <li><a href="https://www.kgec.edu.in/administration/principal">Principal's Office</a></li>
+                                <li class="divider"></li>
+                                <li><a href="https://www.kgec.edu.in/administration/registrar">Registrar's Office</a></li>
+                            </ul>                
+                            </li>
+
+                            <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="font-size:10px;">Admission</a>             
+                            <ul class="dropdown-menu" role="menu" style="z-index:100;">
+                                <li><a href="https://www.kgec.edu.in/admission/btech">Under Graduate (B.Tech)</a></li>
+                                <li class="divider"></li>
+                                <li><a href="https://www.kgec.edu.in/admission/mtech">Post Graduate (M.Tech)</a></li>
+                                <li class="divider"></li>
+                                <li><a href="https://www.kgec.edu.in/admission/mca">MCA</a></li>
+                            </ul>                
+                            </li>
+
+                             <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="font-size:10px;">Training & Placement</a>             
+                            <ul class="dropdown-menu" role="menu" style="z-index:100;min-width:100%">
+                                <li><a href="https://www.kgec.edu.in/trgplc">TPO's Desk</a></li>
+                                <li class="divider"></li>
+                                <li><a href="https://www.kgec.edu.in/trgplc/record">Placement Statistics</a></li>
+                                <li class="divider"></li>
+                                <li><a href="https://www.kgec.edu.in/notice/PLACEMENT">Placement Notice</a></li>
+                                <li class="divider"></li>
+                                <li><a href="https://www.kgec.edu.in/page/plc_reg">Registration</a></li>
+                            </ul>                
+                            </li>
+
+
+                            <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="font-size:10px;">Contact</a>             
+                            <ul class="dropdown-menu" role="menu" style="z-index:100">
+                                <li><a href="https://www.kgec.edu.in/contact">Contact Us</a></li>
+                                <li class="divider"></li>
+                                <li><a href="http://goo.gl/forms/1jmC4f8HSF">Website Feedback</a></li>
+                            </ul>                
+                            </li>
+
+
+                        </ul>
+
+                    </div>
+                    <div class="social-media hidden-sm hidden-xs">
+                        <ul class="nav navbar-nav">
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!--============= End Of Header===========-->
+
+        {% block header %}
+
+        <!-- All header element will come here -->
+
+        {% endblock %}
+
+        {% block body %}
+
+        <!-- All body elements will come here -->
+
+        {% endblock %}
+
+        <!--======== Begin Footer Section ========-->
+
+
+
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+
+    <script src="{% static 'bootstrap-assets/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/custom.js' %}"></script>
+    <!-- JS PLUGINS -->
+    <script src="{% static 'plugins/owl-carousel/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/jquery.easing.min.js' %}"></script>
+    <script src="{% static 'plugins/waypoints/jquery.waypoints.min.js' %}"></script>
+    <script src="{% static 'plugins/countTo/jquery.countTo.js' %}"></script>
+    <script src="{% static 'plugins/inview/jquery.inview.min.js' %}"></script>
+    <script src="{% static 'plugins/Lightbox/dist/js/lightbox.min.js' %}"></script>
+    <script src="{% static 'plugins/WOW/dist/wow.min.js' %}"></script>
+    <!-- GOOGLE MAP -->
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+
+    </body>
+    </html>
+
+</body>
